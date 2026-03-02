@@ -87,7 +87,6 @@ class HandDetector():
         length = math.hypot(x2 - x1, y2 - y1)
         return length, img, [x1, y1, x2, y2, cx, cy]
 
-
 def main():
     p_time = 0
     cap = cv2.VideoCapture(0)
@@ -116,7 +115,6 @@ def main():
 
     cap.release()
     cv2.destroyAllWindows()
-
 
 if __name__ == "__main__":
     main()
