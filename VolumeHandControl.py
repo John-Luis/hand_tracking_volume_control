@@ -6,9 +6,7 @@ from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
-################################
 wCam, hCam = 640, 480
-################################
 
 cap = cv2.VideoCapture(0)
 cap.set(3, wCam)
@@ -17,7 +15,6 @@ pTime = 0
 
 detector = htm.handDetector(detectionCon=0.7, maxHands=1)
 
-# --- STABLE AUDIO FIX ---
 try:
     devices = AudioUtilities.GetSpeakers()
     interface = devices.Activate(
